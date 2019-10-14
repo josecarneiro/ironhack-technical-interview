@@ -1,21 +1,44 @@
 # Acing the Technical Interview
 
+The following document includes a list of tips, common interview questions and external resources that might be helpfull when applying to job postions in the Web Development field. It covers both front-end and backend topics.
+
 ## Target
 
-This document is targeted at Ironhack Web Development Bootcamp graduates, who aim to enter the job market working as Junior Front-End or Back-End Developers.
+The document is targeted at Ironhack Web Development Bootcamp graduates who aim to enter the job market working as Junior Front-end or Backend Developers.
+
+The subjects it touches upon are, for the most part, entirely covered in the bootcamp. Those which are only partially or not at all covered during the bootcamp are signaled.
 
 ## General Tips for Interviews
 
-The following tips are based on generalizations, and repeated experimentation with interviewing processes. Each job interview process will have its own different quirks and will be conducted differently.
+The following tips are based on generalizations, and repeated experimentation with interviewing processes. Each interview process will have its own quirks and will be conducted differently from the others.
 
-Often, the first interview is conducted by a recruiter, that is, someone with a non-technical background whose role is to filter through the pool of potential candidates.
+### Interview Process
 
-The person who does the technical interview is often a different person from the one who does the before + cultural fit interview.
+Interview processes are normally conducted in two to four steps, and will rarely be entirely overseen by the same company employee.
 
-Don’t eat or drink too much before the interview. Wear fresh clothing. Take a water bottle with you.
+The first interview is often designed to filter through the candidate pool. It is usually conducted by a recruiter; that is, someone with a non-technical background.
+
+The second interview is normally a technical interview. The interviewer might be a developer who works as technical lead in the project you aim to work on, or a technical employee whose sole responsibility is to interview potential job candidates.
+
+After a technical interview, some companies will ask a candidate to complete a technical challenge. This technical challenge might be sent as "homework" to be completed in a timeframe ranging from 2 to 7 days. It might also be administered in person with the duration of 1 to 2 hours.
+
+A third and last interview might be conducted by other company stakeholders, such as the company's CEO, a general manager, HR personnel, or development team members to ensure a cultural fit.
+
+### Sitting at an interview
+
+Each of the steps outlined above might be conducted separately or in conjunction with another step, so you should always be ready to sit at an interview for up to 4 hours.
+
+Don’t eat or drink too much before the interview. You don't want to feel unwell during the lenght of the interview.
+
+Wear fresh clothing. Some people will get nervous and sweat.
+
+Take a water bottle with you. It might make you more confortable to have something to hold on to.
+
+If the interview lasts more than two hours, don't feel bad about asking to get up and go to the bathroom, get a glass of water or a coffee.
+
+### A word of advice
 
 Technical interviews may vary widely between companies/interviewers. Some might last 15m, others might last one hour. Questions could be more open ended or more exercise driven. They can be conducted by one or two people. There can be more than one technical interview during an entire recruitment process. If you’re getting into consulting, you might get a technical interview at the consulting firm and later at the client.
-
 
 ## Mock Interview Questions
 
@@ -62,7 +85,7 @@ const sumArray = array => {
 
 By contrast, declarative programming is concerned with what to do, and it abstracts away the how by relying on expressions. This often results in more concise code, but at scale, it can become more difficult to debug because it’s that much less transparent.
 
-Here’s a declarative approach to our sumArray() function, above.
+Here’s a declarative approach to our `sumArray()` function, above.
 
 ```js
 const sumArray = array => {
@@ -199,7 +222,7 @@ The microservice architecture enables the rapid, frequent and reliable delivery 
 
 ### Testing
 
-#### Distinguish between unit testing, integration testing and end-to-end testing.
+#### Q: Distinguish between unit testing, integration testing and end-to-end testing.
 
 In unit testing,  we test each piece of functionality at the smallest practical level and ensure it is working as desired, avoiding relying on external state, services, and not mutating external state or invoking external services.
 
@@ -215,7 +238,7 @@ Google’s engineering guidelines suggests a 70/20/10 split: 70% unit tests, 20%
 
 **Behaviour-driven development** aims to address the shortcomings of TDD, by trying to abstract away implementation details and instead focusing in the behaviour of the functionality.
 
-In both TDD and BDD approaches, tests are written upfront before the actual code is written. Writing tests first helps predict the course of the development, which will ultimately prevent any cases being missed from the code or functionality.
+In both **TDD** and **BDD** approaches, tests are written upfront before the actual code is written. Writing tests first helps predict the course of the development, which will ultimately prevent any cases being missed from the code or functionality.
 
 ### Programming design patterns
 
@@ -225,7 +248,7 @@ Design patterns are typical solutions to common problems in software design. Eac
 
 #### Q: Explain the Model-View-Controller (MVC) architectural pattern.
 
-The **MVC** pattern separates application logic between “Models”, “Views” and “Controllers”.
+The **MVC** pattern separates application logic between **“Models”**, **“Views”** and **“Controllers”**.
 
 Controllers handle a request, process it, retrieve data from the Model, format it and pass it to the view.
 
@@ -241,13 +264,12 @@ In the client-side, it would be View -> Controller -> Model -> Controller -> Vie
 #### Q: What are some common web security concerns?
 
 We should use HTTPS instead of HTTP, since HTTPS is encrypted using public/private key encryption.
-https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https
 
-Cross-site Scripting (XSS).
-https://en.wikipedia.org/wiki/Cross-site_scripting
+[External resource: Google Developer's article on the usage of https.](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https)
 
-Cross-site Request Forging (CSRF).
-https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+[External Resource: Cross-site Scripting (**XSS**).](https://en.wikipedia.org/wiki/Cross-site_scripting)
+
+[External Resource: Cross-site Request Forging (CSRF).](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
 ### Project Management
 
