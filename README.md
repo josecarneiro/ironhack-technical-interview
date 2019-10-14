@@ -1,2 +1,296 @@
-# ironhack-156-technical-interview
-Tips on how to ace a technical interview, common topics overview
+# Acing the Technical Interview
+
+## Target
+
+This document is targeted at Ironhack Web Development Bootcamp graduates, who aim to enter the job market working as Junior Front-End or Back-End Developers.
+
+## General Tips for Interviews
+
+The following tips are based on generalizations, and repeated experimentation with interviewing processes. Each job interview process will have its own different quirks and will be conducted differently.
+
+Often, the first interview is conducted by a recruiter, that is, someone with a non-technical background whose role is to filter through the pool of potential candidates.
+
+The person who does the technical interview is often a different person from the one who does the before + cultural fit interview.
+
+Don’t eat or drink too much before the interview. Wear fresh clothing. Take a water bottle with you.
+
+Technical interviews may vary widely between companies/interviewers. Some might last 15m, others might last one hour. Questions could be more open ended or more exercise driven. They can be conducted by one or two people. There can be more than one technical interview during an entire recruitment process. If you’re getting into consulting, you might get a technical interview at the consulting firm and later at the client.
+
+
+## Mock Interview Questions
+
+### Programming Paradigms
+
+#### Q: Is JavaScript an object-oriented programming language?
+
+This question is often asked by people with a misinformed view of JavaScript.
+
+JavaScript is a multi-paradigm language, meaning that it supports multiple different programming styles, including event-driven, functional and object-oriented.
+
+OOP is based around the concept of “objects”. These are data structures that contain data fields, known in JavaScript as “properties”, and procedures, known as “methods”.
+
+Whenever you rely on in-built methods, prototypes or classes, you are essentially using Object-Oriented Programming.
+
+#### Q: Why is it called Object-oriented?
+
+In OOP everything is considered to be modeled as an object. This abstraction can be taken all the way down to nuts and bolts for a car, or as broad as simply a car type with a year, make, and model.
+
+#### Q: What are some advantages of functional programming?
+
+FP is based around the concept of “pure functions”, which avoid shared state, mutable data and side-effects.
+https://www.freecodecamp.org/news/functional-programming-principles-in-javascript-1b8fc6c3563f/
+
+#### Q: What is a pure function?
+
+Given the same inputs, a pure function always returns the same output. It does not have side effects: these are anything, such as logging to the console or modifying an external variable, beyond returning the result.
+
+#### Q: What’s the difference between imperative and declarative programming?
+
+We can also think about the difference between OOP and FP in terms of the difference between “imperative” and “declarative” programming.
+
+These are umbrella terms that describe shared characteristics between multiple different programming paradigms. FP is an example of declarative programming, while OOP is an example of imperative programming.
+
+In a basic sense, imperative programming is concerned with how you do something. It spells out the steps in the most essential way, and is characterised by for and while loops, if and switch statements, and so on.
+
+```js
+const sumArray = array => {
+  let result = 0;
+  for (let i = 0; i < array.length; i++) result += array[i];
+  return result;
+}
+```
+
+By contrast, declarative programming is concerned with what to do, and it abstracts away the how by relying on expressions. This often results in more concise code, but at scale, it can become more difficult to debug because it’s that much less transparent.
+
+Here’s a declarative approach to our sumArray() function, above.
+
+```js
+const sumArray = array => {
+  return array.reduce((x, y) => x + y);
+};
+```
+
+## Object-oriented programming
+
+Nice example of OOP in JS
+https://github.com/gabrielecirulli/2048
+
+#### Q: What is a class?
+
+Classes are at the core of object-oriented programming. They generalize a type of object, allowing you to instantiate multiple objects that share the same basic properties and methods.
+
+Classes can be extended.
+
+https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript
+
+#### Q: What is an instance?
+
+It’s an object instantiated from a class.
+
+#### Q: How does inheritance work?
+
+A class can extend another class, and therefore inherit its constructor, properties, methods, statics.
+
+#### Q: Explain Polymorphism?
+
+As one of the tenets of Object Oriented Programming, it is the practice of designing objects to share behaviors and to be able to override shared behaviors with specific ones. Polymorphism takes advantage of inheritance in order to make this happen.
+
+#### Q: Differentiate between composition and inheritence.
+
+__TO DO__
+
+### Diverse JavaScript Questions
+
+#### Q: Explain immutability
+
+Something mutable is, by definition, liable or subject to change or alteration. We use the word to refer to objects whose state is allowed to change over time. An immutable value is the exact opposite: after it has been created, it can never change.
+
+Values in JavaScript are immutable. Declared variables, objects are, by default, mutable.
+
+```js
+var statement = "I am an immutable value";
+var otherStr = statement.slice(8, 17);
+```
+
+In the example above, the original string stays unchanged.
+
+Check the link https://doesitmutate.xyz/
+
+### Generic JavaScript questions
+
+#### Q: What should I take into account when choosing between writing synchronous or asynchronous code?
+
+Synchronous operations might block the main thread. Asynchronous operations should be built in a way that doesn’t block the main thread.
+
+// Check fs examples in node documentation https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
+
+#### Q: How Does a Function Expression Differ from a Function Declaration?
+
+Function declarations are hoisted, while function expressions are not. That means function declarations are moved to the top of their scope by the JavaScript interpreter, and so you can define a function declaration and call it anywhere in your code. By contrast, you can only call a function expression in linear sequence: you have to define it before you call it.
+
+```js
+// Function Declaration
+sum(1,2);
+function sum(x, y) {
+  return x + y;
+};
+
+// Function Expression: ES5
+var sum = function(x, y) {
+  return x + y;
+};
+// Function Expression: ES6+
+const sum = (x, y) => { return x + y };
+```
+
+#### Q: What are the data types in JavaScript?
+
+There are several data types defined in JavaScript:
+
+**Primitive type**: Boolean, Number, String, Null, Undefined, and as of recently BigInt and Symbol.
+**Reference type**: object.
+
+#### Q: Is an Array a data type?
+
+An Array is not a data type. It is one of JS’s built-in global objects. Other global global objects include instantiatable classes such as Date, Error, Promise, and useful objects such as Math.
+
+Arrays are special, in the sense that they have some of their functionality built into the language.
+
+#### Q: What is a closure?
+
+A closure “encapsulates” a portion of code.
+
+A closure is an inner function that has access to the outer (enclosing) function’s variables — scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables.
+
+#### Q: What are promises? What is their advantage over callbacks?
+
+A callback is a pattern, while promises have been specified into the language.
+
+A promise is an object that wraps an asynchronous operation and “resolves” when it’s done.
+
+Promises can also be used in conjunction with async/await in order to write asynchronous code in a more synchronous-looking manner.
+
+https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee
+
+### APIs
+
+#### Q: What are microservices?
+
+The microservice architecture is an architectural style that structures an application as a collection of small services that are loosely coupled, independently deployable, highly maintainable and testable.
+
+The microservice architecture enables the rapid, frequent and reliable delivery of large, complex applications.
+
+#### Q: Name several patterns for web-service APIs. Which is most commonly used in 2019?
+
+**REST** (or Representational State Transfer) is an architectural pattern that separates content by resources and methods.
+
+**SOAP** (or Simple Object Access Protocol) is a protocol that transfers strictly defined data, structured in the XML format. It was first defined in 1999 and is used in a lot of legacy applications.
+
+**GraphQL** is a data query and manipulation language that offers great flexibility when loading and modifying data. It allows you to load only the data you require. It was developed internally by Facebook in 2012 but released as an open-source standard in 2015. Many think it’s the future of web-service APIs, but it’s still an incomplete spec, with some poor implementations.
+
+#### Q: Enumerate some HTTP methods, and explain their purpose.
+
+**GET**: Retrieve data. Should not have consequences in terms of mutating state or side effects on the server.
+**HEAD**: Identical to that of a GET request, but without the response body.
+**POST**: Used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+**PUT**: Replaces all current representations of the target resource with the request payload.
+**PATCH**: Partially updates the target resource.
+**DELETE**: Deletes the specified resource.
+
+### Testing
+
+#### Distinguish between unit testing, integration testing and end-to-end testing.
+
+In unit testing,  we test each piece of functionality at the smallest practical level and ensure it is working as desired, avoiding relying on external state, services, and not mutating external state or invoking external services.
+
+In integration, we test how two or more separate pieces of functionality work together.
+
+In end-to-end (or e2e) we test an application in its entirety, including the integration with external services.
+
+Google’s engineering guidelines suggests a 70/20/10 split: 70% unit tests, 20% integration tests, and 10% end-to-end tests.
+
+#### Q: What is test-driven development (TDD)? How does it differ from behaviour-driven development (BDD)?
+
+**Test-driven development** (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.
+
+**Behaviour-driven development** aims to address the shortcomings of TDD, by trying to abstract away implementation details and instead focusing in the behaviour of the functionality.
+
+In both TDD and BDD approaches, tests are written upfront before the actual code is written. Writing tests first helps predict the course of the development, which will ultimately prevent any cases being missed from the code or functionality.
+
+### Programming design patterns
+
+#### Q: What is a design pattern?
+
+Design patterns are typical solutions to common problems in software design. Each pattern is like a blueprint that you can customize to solve a particular design problem in your code.
+
+#### Q: Explain the Model-View-Controller (MVC) architectural pattern.
+
+The **MVC** pattern separates application logic between “Models”, “Views” and “Controllers”.
+
+Controllers handle a request, process it, retrieve data from the Model, format it and pass it to the view.
+
+Models are responsible for shaping, storing and retrieving the data.
+
+Views display the data and receive user input.
+
+The normal sequence in server-side MVC is Controller -> Model -> Controller -> View.
+In the client-side, it would be View -> Controller -> Model -> Controller -> View.
+
+### Web Security
+
+#### Q: What are some common web security concerns?
+
+We should use HTTPS instead of HTTP, since HTTPS is encrypted using public/private key encryption.
+https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https
+
+Cross-site Scripting (XSS).
+https://en.wikipedia.org/wiki/Cross-site_scripting
+
+Cross-site Request Forging (CSRF).
+https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)
+
+### Project Management
+
+#### Q: What is waterfall?
+
+Simply put, waterfall project management is a sequential, linear process of project management. It consists of several discrete phases. No phase begins until the prior phase is complete, and each phase's completion is terminal. Waterfall management does not allow you to return to a previous phase.
+
+#### Q: What is the Agile methodology?
+
+The Agile methodology helps continuous iteration of development and testing by breaking the product into smaller builds.
+
+In this methodology, development and testing activities are concurrent, unlike other software development methodologies (such as Waterfall). It also encourages teamwork and face-to-face communication. Business, stakeholders, and developers and clients must work together to develop a product.
+
+#### Q: What is SCRUM?
+
+Scrum is an agile process that allows us to focus on delivering value in the shortest time. It rapidly and repeatedly inspects actual working software. It emphasizes accountability, teamwork, and iterative progress toward a well-defined goal.
+
+The Scrum Framework usually deals with the fact that the requirements are likely to change or most of the time not known at the start of the project.
+
+https://www.guru99.com/agile-vs-scrum.html
+
+#### Q: What is the role of a DevOps?
+
+Takes care of system health, automation of deployments and tests, integration with external services.
+What are SOLID principles
+
+Principles we should strive for when developing.
+
+**S: Single Responsibility**
+Each piece of your code should address a single purpose and not get entangled with other code.
+
+**O: Open/closed**
+Your code should be open to extension (think inheritance) and closed to modification.
+
+**L: Liskov Substitution Principle**
+Your code should be substitutable for a different code implementation without breaking your application.
+
+**I: Interface Segregation Principle**
+Many highly specific smaller interfaces should be better than a few general purpose interfaces.
+
+**D: Dependency Inversion Principle**
+One should "depend upon abstractions, [not] concretions."
+
+## External Resources
+
+**TO DO**
