@@ -148,7 +148,15 @@ console.log(statement); // "immutable"
 
 In the example above, the value for the original string stays unchanged. The variable, on the other hand, can be re-assigned.
 
-### Generic JavaScript questions
+#### Q: What is a Regular Expression?
+
+**Regular Expressions (RegEX)** are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
+
+These patterns are used with the `exec` and `test` methods of RegExp, and with the `match`, `matchAll`, `replace`, `search`, and `split` methods of `String`.
+
+> External Resource: [Short explanation of RegEx](https://twitter.com/s0md3v/status/1171394403065155584?s=03)
+
+> External Resource: [MDN Reference for Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 #### Q: What should I take into account when choosing between writing synchronous or asynchronous code?
 
@@ -346,4 +354,5 @@ One should "depend upon abstractions, [not] concretions."
 ## External Resources
 
 > [123 JavaScript Interview Questions](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions)
+
 > [1000 JavaScript Interview Questions](https://github.com/sudheerj/javascript-interview-questions)
