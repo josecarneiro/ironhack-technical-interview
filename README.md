@@ -1,6 +1,6 @@
 # Acing the Technical Interview
 
-The following document includes a list of tips, common interview questions and external resources that might be helpfull when applying to job postions in the Web Development field. It covers both front-end and backend topics.
+The following document includes a list of tips, common interview questions and external resources that might be helpful when applying to job positions in the Web Development field. It covers both front-end and backend topics.
 
 ## Target
 
@@ -20,7 +20,7 @@ The first interview is often designed to filter through the candidate pool. It i
 
 The second interview is normally a technical interview. The interviewer might be a developer who works as technical lead in the project you aim to work on, or a technical employee whose sole responsibility is to interview potential job candidates.
 
-After a technical interview, some companies will ask a candidate to complete a technical challenge. This technical challenge might be sent as "homework" to be completed in a timeframe ranging from 2 to 7 days. It might also be administered in person with the duration of 1 to 2 hours.
+After a technical interview, some companies will ask a candidate to complete a technical challenge. This technical challenge might be sent as "homework" to be completed in a time frame ranging from 2 to 7 days. It might also be administered in person with the duration of 1 to 2 hours.
 
 A third and last interview might be conducted by other company stakeholders, such as the company's CEO, a general manager, HR personnel, or development team members to ensure a cultural fit.
 
@@ -28,18 +28,18 @@ A third and last interview might be conducted by other company stakeholders, suc
 
 Each of the steps outlined above might be conducted separately or in conjunction with another step, so you should always be ready to sit at an interview for up to 4 hours.
 
-Don’t eat or drink too much before the interview. You don't want to feel unwell during the lenght of the interview.
+Don’t eat or drink too much before the interview. You don't want to feel unwell during the length of the interview.
 
 Wear fresh clothing. Some people will get nervous and sweat.
 
-Take a water bottle with you. It might make you more confortable to have something to hold on to.
+Take a water bottle with you. It might make you more comfortable to have something to hold on to.
 
 If the interview lasts more than two hours, don't feel bad about asking to get up and go to the bathroom, get a glass of water or a coffee.
 
 ### Some quick points
 
 - Technical interviews may vary widely between companies/interviewers.
-- Some might last 15m, others might last one hour.
+- Some might last 15 minutes, others might last 1 hour.
 - Questions could be more open ended or more exercise driven.
 - They can be conducted by one or two people.
 - There can be more than one technical interview during an entire recruitment process.
@@ -53,7 +53,7 @@ If the interview lasts more than two hours, don't feel bad about asking to get u
 
 This question is often asked by people with a misinformed view of JavaScript.
 
-JavaScript is a **multi-paradigm language**, meaning that it supports multiple different programming styles, including **event-driven**, **functional** and **object-oriented**.
+JavaScript is a *multi-paradigm language*, meaning that it supports multiple different programming styles, including **event-driven**, **functional** and **object-oriented**.
 
 **Object-Oriented Programming (OOP)** is based around the concept of `objects`. These are data structures that contain data fields, known in JavaScript as `properties`, and procedures, known as `methods`.
 
@@ -61,12 +61,15 @@ Whenever you rely on in-built `methods`, `prototypes` or `classes`, you are esse
 
 #### Q: Why is it called Object-Oriented?
 
-In *OOP*, everything is considered to be modeled as an object. This abstraction can be taken all the way down to nuts and bolts for a car, or as broad as simply a car type with a year, make, and model.
+In **OOP**, everything is considered to be modeled as an object.
+
+This abstraction can be taken all the way down to nuts and bolts for a car, or as broad as simply a car type with a year, make, and model.
 
 #### Q: What are some advantages of functional programming?
 
-FP is based around the concept of “pure functions”, which avoid shared state, mutable data and side-effects.
-https://www.freecodecamp.org/news/functional-programming-principles-in-javascript-1b8fc6c3563f/
+FP is based around the concept of *pure functions*, which avoid shared state, mutable data and side-effects.
+
+> **External Resource**: [Basics of functional programming](https://www.freecodecamp.org/news/functional-programming-principles-in-javascript-1b8fc6c3563f)
 
 #### Q: What is a pure function?
 
@@ -74,11 +77,11 @@ Given the same inputs, a pure function always returns the same output. It does n
 
 #### Q: What’s the difference between imperative and declarative programming?
 
-We can also think about the difference between *OOP* and *FP* in terms of the difference between *imperative* and *declarative* programming.
+We can also think about the difference between *OOP* and *FP* in terms of the difference between **imperative** and **declarative** programming.
 
-These are umbrella terms that describe shared characteristics between multiple different programming para digms. FP is an example of *declarative* programming, while OOP is an example of *imperative* programming.
+These are umbrella terms that describe shared characteristics between multiple different programming paradigms. FP is an example of *declarative* programming, while *OOP* is an example of *imperative* programming.
 
-In a basic sense, imperative programming is concerned with how you do something. It spells out the steps in the most essential way, and is characterised by for and while loops, if and switch statements, and so on.
+In a basic sense, imperative programming is concerned with how you do something. It spells out the steps in the most essential way, and is characterized by for and while loops, if and switch statements, and so on.
 
 ```js
 const sumArray = array => {
@@ -120,11 +123,11 @@ A class can extend another class, and therefore inherit its constructor, propert
 
 As one of the tenets of Object Oriented Programming, it is the practice of designing objects to share behaviors and to be able to override shared behaviors with specific ones. Polymorphism takes advantage of inheritance in order to make this happen.
 
-#### Q: Differentiate between composition and inheritence.
+#### Q: Differentiate between composition and inheritance.
 
 Composition gives you more flexibility by composing functionality to create a new object, while inheritance forces you to extend entities in an inheritance tree.
 
-> External Resource: [Composition vs. Inheritance](https://www.vicompany.nl/magazine/composition-over-inheritance-and-javascript)
+> **External Resource**: [Composition vs. Inheritance](https://www.vicompany.nl/magazine/composition-over-inheritance-and-javascript)
 
 ### Diverse JavaScript Questions
 
@@ -154,9 +157,9 @@ In the example above, the value for the original string stays unchanged. The var
 
 These patterns are used with the `exec` and `test` methods of RegExp, and with the `match`, `matchAll`, `replace`, `search`, and `split` methods of `String`.
 
-> External Resource: [Short explanation of RegEx](https://twitter.com/s0md3v/status/1171394403065155584?s=03)
+> **External Resource**: [Short explanation of RegEx](https://twitter.com/s0md3v/status/1171394403065155584?s=03)
 
-> External Resource: [MDN Reference for Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+> **External Resource**: [MDN Reference for Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 #### Q: What should I take into account when choosing between writing synchronous or asynchronous code?
 
@@ -196,7 +199,7 @@ There are several data types defined in JavaScript:
 
 #### Q: Is an `Array` a data type?
 
-An `Array` is not a data type. It is one of JS’s built-in global objects. Other global objects include instantiatable classes such as `Date`, `Error`, `Promise`, and useful objects such as `Math`.
+An `Array` is not a data type. It is one of JS’s built-in global objects. Other global objects include instantiable classes such as `Date`, `Error`, `Promise`, and useful objects such as `Math`.
 
 `Arrays` are special, in the sense that they have some of their functionality built into the language.
 
@@ -204,7 +207,7 @@ An `Array` is not a data type. It is one of JS’s built-in global objects. Othe
 
 A **closure** encapsulates a portion of code.
 
-A closure is an inner function that has access to the outer (enclosing) function’s variables — scope chain.
+A *closure* is an inner function that has access to the outer (enclosing) function’s variables — scope chain.
 
 The closure has access to three scope chains:
 
@@ -220,7 +223,7 @@ A `Promise` is an object that wraps an *asynchronous operation* and *resolves* w
 
 Promises can also be used in conjunction with `async`/`await` in order to write asynchronous code in a more synchronous-looking manner.
 
-> External Resource: [Medium article on callbacks vs. promises](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee)
+> **External Resource**: [Medium article on callbacks vs. promises](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee)
 
 ### APIs
 
@@ -232,37 +235,41 @@ The microservice architecture enables the rapid, frequent and reliable delivery 
 
 #### Q: Name several patterns for web-service APIs. Which is most commonly used in 2019?
 
-**REST** (or Representational State Transfer) is an architectural pattern that separates content by resources and methods.
+**REST (Representational State Transfer)** is an architectural pattern that separates content by resources and methods.
 
-**SOAP** (or Simple Object Access Protocol) is a protocol that transfers strictly defined data, structured in the XML format. It was first defined in 1999 and is used in a lot of legacy applications.
+**SOAP (Simple Object Access Protocol)** is a protocol that transfers strictly defined data, structured in the XML format. It was first defined in 1999 and is used in a lot of legacy applications.
 
 **GraphQL** is a data query and manipulation language that offers great flexibility when loading and modifying data. It allows you to load only the data you require. It was developed internally by Facebook in 2012 but released as an open-source standard in 2015. Many think it’s the future of web-service APIs, but it’s still an incomplete spec, with some poor implementations.
 
 #### Q: Enumerate some HTTP methods, and explain their purpose.
 
 **GET**: Retrieve data. Should not have consequences in terms of mutating state or side effects on the server.
+
 **POST**: Used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+
 **PUT**: Replaces all current representations of the target resource with the request payload.
+
 **PATCH**: Partially updates the target resource.
+
 **DELETE**: Deletes the specified resource.
 
 ### Testing
 
 #### Q: Distinguish between unit testing, integration testing and end-to-end testing.
 
-In *unit testing*,  we test each piece of functionality at the smallest practical level and ensure it is working as desired, not relying on external state, services, and not mutating external state or invoking external services.
+In **unit testing**,  we test each piece of functionality at the smallest practical level and ensure it is working as desired, not relying on external state, services, and not mutating external state or invoking external services.
 
-In *integration testing*, we test how two or more separate pieces of functionality work together.
+In **integration testing**, we test how two or more separate pieces of functionality work together.
 
-In *end-to-end* (or e2e) we test an application in its entirety, including the integration with external services.
+In **end-to-end** (or e2e) we test an application in its entirety, including the integration with external services.
 
 Google’s engineering guidelines suggests a *70/20/10 split*: 70% unit tests, 20% integration tests, and 10% end-to-end tests.
 
-#### Q: What is test-driven development (TDD)? How does it differ from behaviour-driven development (BDD)?
+#### Q: What is test-driven development (TDD)? How does it differ from behavior-driven development (BDD)?
 
 **Test-driven development (TDD)** is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.
 
-**Behaviour-driven development (BDD)** aims to address the shortcomings of *TDD*, by trying to abstract away implementation details and instead focusing in the behaviour of the functionality.
+**Behavior-driven development (BDD)** aims to address the shortcomings of *TDD*, by trying to abstract away implementation details and instead focusing in the behavior of the functionality.
 
 In both **TDD** and **BDD** approaches, tests are written upfront before the actual code is written. Writing tests first helps predict the course of the development, which will ultimately prevent any cases being missed from the code or functionality.
 
@@ -286,13 +293,13 @@ The **MVC** pattern separates application logic between **“Models”**, **“V
 
 #### Q: What are some common web security concerns?
 
-**HTTP**
+**HTTP vs. HTTPS**
 
-We should use HTTPS instead of HTTP, since HTTPS is encrypted using public/private key encryption.
+We should use **HTTPS** instead of **HTTP**, since HTTPS is encrypted using public/private key encryption.
 
-> External resource: [Google Developer's article on the usage of https.](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https)
+> **External Resource**: [Google Developer's article on the usage of https.](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https)
 
-**Cross-Site Scription (XSS)**
+**Cross-Site Scripting (XSS)**
 
 With Cross-Site Scripting, a malicious third party will find a way to *inject* arbitrary code on your page, and will use it to perform actions in name of the user.
 
@@ -300,7 +307,7 @@ The way we mitigate XSS is by
 
 For example, if Twitter didn't *escape* special characters in user publications before displaying them on a page, someone with bad intentions would have the ability to inject custom JavaScript that would create spam posts in name of the user. [This has happened in the past](https://www.youtube.com/watch?v=zv0kZKC6GAM).
 
-> External resource: [Cross-site Scripting (**XSS**).](https://en.wikipedia.org/wiki/Cross-site_scripting)
+> **External Resource**: [Cross-site Scripting (**XSS**).](https://en.wikipedia.org/wiki/Cross-site_scripting)
 
 **Cross-Site Request Forgery (CSRF)**
 
@@ -308,13 +315,13 @@ With Cross-Site Request Forgery, an ill-intentioned third party would be able is
 
 The way we mitigate CSRF attacks is by sending a unique CSRF Token with each request, or by not using cookie-based authentication at all (using JWT instead).
 
-> External resource: [Cross-site Request Forging (CSRF).](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
+> **External Resource**: [Cross-site Request Forging (CSRF).](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
 ### Project Management
 
 #### Q: What is Waterfall?
 
-Waterfall is a sequential, linear process of project management. It consists of several discrete phases. No phase begins until the prior phase is complete, and each phase's completion is terminal.
+**Waterfall** is a sequential, linear process of project management. It consists of several discrete phases. No phase begins until the prior phase is complete, and each phase's completion is terminal.
 
 Waterfall management does not allow you to return to a previous phase.
 
@@ -324,13 +331,13 @@ The Agile methodology helps continuous iteration of development and testing by b
 
 In this methodology, development and testing activities are concurrent, unlike other software development methodologies (such as Waterfall). It also encourages teamwork and face-to-face communication. Business, stakeholders, and developers and clients must work together to develop a product.
 
-#### Q: What is SCRUM?
+#### Q: What is Scrum?
 
-Scrum is an agile process that allows us to focus on delivering value in the shortest time. It rapidly and repeatedly inspects actual working software. It emphasizes accountability, teamwork, and iterative progress toward a well-defined goal.
+**Scrum** is an *agile process* that allows us to focus on delivering value in the shortest time. It rapidly and repeatedly inspects actual working software. It emphasizes accountability, teamwork, and iterative progress toward a well-defined goal.
 
 The Scrum Framework usually deals with the fact that the requirements are likely to change or most of the time not known at the start of the project.
 
-> External Resource: [Agile vs. SCRUM](https://www.guru99.com/agile-vs-scrum.html)
+> **External Resource**: [Agile vs. SCRUM](https://www.guru99.com/agile-vs-scrum.html)
 
 #### Q: What are SOLID principles?
 
