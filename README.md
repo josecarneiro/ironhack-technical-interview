@@ -122,7 +122,9 @@ As one of the tenets of Object Oriented Programming, it is the practice of desig
 
 #### Q: Differentiate between composition and inheritence.
 
-__TO DO__
+Composition gives you more flexibility by composing functionality to create a new object, while inheritance forces you to extend entities in an inheritance tree.
+
+> External Resource: [Composition vs. Inheritance](https://www.vicompany.nl/magazine/composition-over-inheritance-and-javascript)
 
 ### Diverse JavaScript Questions
 
@@ -192,9 +194,9 @@ An `Array` is not a data type. It is one of JS’s built-in global objects. Othe
 
 #### Q: What is a closure?
 
-A **closure** *encapsulates* a portion of code.
+A **closure** encapsulates a portion of code.
 
-A *closure* is an inner function that has access to the outer (enclosing) function’s variables — scope chain.
+A closure is an inner function that has access to the outer (enclosing) function’s variables — scope chain.
 
 The closure has access to three scope chains:
 
@@ -202,15 +204,15 @@ The closure has access to three scope chains:
 - Access to the outer function’s variables.
 - Access to the global variables.
 
-#### Q: What are promises? What is their advantage over callbacks?
+#### Q: What is a `Promise`? What is their advantage over callbacks?
 
-A callback is a pattern, while promises have been specified into the language.
+A `callback` is a pattern, while `promises` have been specified into the language.
 
-A promise is an object that wraps an asynchronous operation and “resolves” when it’s done.
+A `Promise` is an object that wraps an *asynchronous operation* and *resolves* when it’s done.
 
-Promises can also be used in conjunction with async/await in order to write asynchronous code in a more synchronous-looking manner.
+Promises can also be used in conjunction with `async`/`await` in order to write asynchronous code in a more synchronous-looking manner.
 
-https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee
+> External Resource: [Medium article on callbacks vs. promises](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee)
 
 ### APIs
 
@@ -231,7 +233,6 @@ The microservice architecture enables the rapid, frequent and reliable delivery 
 #### Q: Enumerate some HTTP methods, and explain their purpose.
 
 **GET**: Retrieve data. Should not have consequences in terms of mutating state or side effects on the server.
-**HEAD**: Identical to that of a GET request, but without the response body.
 **POST**: Used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
 **PUT**: Replaces all current representations of the target resource with the request payload.
 **PATCH**: Partially updates the target resource.
@@ -241,19 +242,19 @@ The microservice architecture enables the rapid, frequent and reliable delivery 
 
 #### Q: Distinguish between unit testing, integration testing and end-to-end testing.
 
-In unit testing,  we test each piece of functionality at the smallest practical level and ensure it is working as desired, avoiding relying on external state, services, and not mutating external state or invoking external services.
+In *unit testing*,  we test each piece of functionality at the smallest practical level and ensure it is working as desired, not relying on external state, services, and not mutating external state or invoking external services.
 
-In integration, we test how two or more separate pieces of functionality work together.
+In *integration testing*, we test how two or more separate pieces of functionality work together.
 
-In end-to-end (or e2e) we test an application in its entirety, including the integration with external services.
+In *end-to-end* (or e2e) we test an application in its entirety, including the integration with external services.
 
-Google’s engineering guidelines suggests a 70/20/10 split: 70% unit tests, 20% integration tests, and 10% end-to-end tests.
+Google’s engineering guidelines suggests a *70/20/10 split*: 70% unit tests, 20% integration tests, and 10% end-to-end tests.
 
 #### Q: What is test-driven development (TDD)? How does it differ from behaviour-driven development (BDD)?
 
-**Test-driven development** (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.
+**Test-driven development (TDD)** is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.
 
-**Behaviour-driven development** aims to address the shortcomings of TDD, by trying to abstract away implementation details and instead focusing in the behaviour of the functionality.
+**Behaviour-driven development (BDD)** aims to address the shortcomings of *TDD*, by trying to abstract away implementation details and instead focusing in the behaviour of the functionality.
 
 In both **TDD** and **BDD** approaches, tests are written upfront before the actual code is written. Writing tests first helps predict the course of the development, which will ultimately prevent any cases being missed from the code or functionality.
 
@@ -267,32 +268,47 @@ Design patterns are typical solutions to common problems in software design. Eac
 
 The **MVC** pattern separates application logic between **“Models”**, **“Views”** and **“Controllers”**.
 
-Controllers handle a request, process it, retrieve data from the Model, format it and pass it to the view.
+**Controllers** handle a request, process it, retrieve data from the **Model**, format it and pass it to the **View**.
 
-Models are responsible for shaping, storing and retrieving the data.
+**Models** are responsible for shaping, storing and retrieving the data.
 
-Views display the data and receive user input.
-
-The normal sequence in server-side MVC is Controller -> Model -> Controller -> View.
-In the client-side, it would be View -> Controller -> Model -> Controller -> View.
+**Views** display the data and receive user input.
 
 ### Web Security
 
 #### Q: What are some common web security concerns?
 
+**HTTP**
+
 We should use HTTPS instead of HTTP, since HTTPS is encrypted using public/private key encryption.
 
-[External resource: Google Developer's article on the usage of https.](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https)
+> External resource: [Google Developer's article on the usage of https.](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https)
 
-[External Resource: Cross-site Scripting (**XSS**).](https://en.wikipedia.org/wiki/Cross-site_scripting)
+**Cross-Site Scription (XSS)**
 
-[External Resource: Cross-site Request Forging (CSRF).](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
+With Cross-Site Scripting, a malicious third party will find a way to *inject* arbitrary code on your page, and will use it to perform actions in name of the user.
+
+The way we mitigate XSS is by 
+
+For example, if Twitter didn't *escape* special characters in user publications before displaying them on a page, someone with bad intentions would have the ability to inject custom JavaScript that would create spam posts in name of the user. [This has happened in the past](https://www.youtube.com/watch?v=zv0kZKC6GAM).
+
+> External resource: [Cross-site Scripting (**XSS**).](https://en.wikipedia.org/wiki/Cross-site_scripting)
+
+**Cross-Site Request Forgery (CSRF)**
+
+With Cross-Site Request Forgery, an ill-intentioned third party would be able issue requests to our application with a user's authentication information without their knowledge.
+
+The way we mitigate CSRF attacks is by sending a unique CSRF Token with each request, or by not using cookie-based authentication at all (using JWT instead).
+
+> External resource: [Cross-site Request Forging (CSRF).](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
 ### Project Management
 
-#### Q: What is waterfall?
+#### Q: What is Waterfall?
 
-Simply put, waterfall project management is a sequential, linear process of project management. It consists of several discrete phases. No phase begins until the prior phase is complete, and each phase's completion is terminal. Waterfall management does not allow you to return to a previous phase.
+Waterfall is a sequential, linear process of project management. It consists of several discrete phases. No phase begins until the prior phase is complete, and each phase's completion is terminal.
+
+Waterfall management does not allow you to return to a previous phase.
 
 #### Q: What is the Agile methodology?
 
@@ -306,12 +322,9 @@ Scrum is an agile process that allows us to focus on delivering value in the sho
 
 The Scrum Framework usually deals with the fact that the requirements are likely to change or most of the time not known at the start of the project.
 
-https://www.guru99.com/agile-vs-scrum.html
+> External Resource: [Agile vs. SCRUM](https://www.guru99.com/agile-vs-scrum.html)
 
-#### Q: What is the role of a DevOps?
-
-Takes care of system health, automation of deployments and tests, integration with external services.
-What are SOLID principles
+#### Q: What are SOLID principles?
 
 Principles we should strive for when developing.
 
@@ -332,4 +345,5 @@ One should "depend upon abstractions, [not] concretions."
 
 ## External Resources
 
-**TO DO**
+> [123 JavaScript Interview Questions](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions)
+> [1000 JavaScript Interview Questions](https://github.com/sudheerj/javascript-interview-questions)
