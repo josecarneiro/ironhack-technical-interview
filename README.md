@@ -36,9 +36,14 @@ Take a water bottle with you. It might make you more confortable to have somethi
 
 If the interview lasts more than two hours, don't feel bad about asking to get up and go to the bathroom, get a glass of water or a coffee.
 
-### A word of advice
+### Some quick points
 
-Technical interviews may vary widely between companies/interviewers. Some might last 15m, others might last one hour. Questions could be more open ended or more exercise driven. They can be conducted by one or two people. There can be more than one technical interview during an entire recruitment process. If you’re getting into consulting, you might get a technical interview at the consulting firm and later at the client.
+- Technical interviews may vary widely between companies/interviewers.
+- Some might last 15m, others might last one hour.
+- Questions could be more open ended or more exercise driven.
+- They can be conducted by one or two people.
+- There can be more than one technical interview during an entire recruitment process.
+- If you’re getting into consulting, you might get a technical interview at the consulting firm and later at the client.
 
 ## Mock Interview Questions
 
@@ -48,15 +53,15 @@ Technical interviews may vary widely between companies/interviewers. Some might 
 
 This question is often asked by people with a misinformed view of JavaScript.
 
-JavaScript is a multi-paradigm language, meaning that it supports multiple different programming styles, including event-driven, functional and object-oriented.
+JavaScript is a **multi-paradigm language**, meaning that it supports multiple different programming styles, including **event-driven**, **functional** and **object-oriented**.
 
-OOP is based around the concept of “objects”. These are data structures that contain data fields, known in JavaScript as “properties”, and procedures, known as “methods”.
+**Object-Oriented Programming (OOP)** is based around the concept of `objects`. These are data structures that contain data fields, known in JavaScript as `properties`, and procedures, known as `methods`.
 
-Whenever you rely on in-built methods, prototypes or classes, you are essentially using Object-Oriented Programming.
+Whenever you rely on in-built `methods`, `prototypes` or `classes`, you are essentially using Object-Oriented Programming.
 
-#### Q: Why is it called Object-oriented?
+#### Q: Why is it called Object-Oriented?
 
-In OOP everything is considered to be modeled as an object. This abstraction can be taken all the way down to nuts and bolts for a car, or as broad as simply a car type with a year, make, and model.
+In *OOP*, everything is considered to be modeled as an object. This abstraction can be taken all the way down to nuts and bolts for a car, or as broad as simply a car type with a year, make, and model.
 
 #### Q: What are some advantages of functional programming?
 
@@ -69,9 +74,9 @@ Given the same inputs, a pure function always returns the same output. It does n
 
 #### Q: What’s the difference between imperative and declarative programming?
 
-We can also think about the difference between OOP and FP in terms of the difference between “imperative” and “declarative” programming.
+We can also think about the difference between *OOP* and *FP* in terms of the difference between *imperative* and *declarative* programming.
 
-These are umbrella terms that describe shared characteristics between multiple different programming paradigms. FP is an example of declarative programming, while OOP is an example of imperative programming.
+These are umbrella terms that describe shared characteristics between multiple different programming para digms. FP is an example of *declarative* programming, while OOP is an example of *imperative* programming.
 
 In a basic sense, imperative programming is concerned with how you do something. It spells out the steps in the most essential way, and is characterised by for and while loops, if and switch statements, and so on.
 
@@ -80,7 +85,7 @@ const sumArray = array => {
   let result = 0;
   for (let i = 0; i < array.length; i++) result += array[i];
   return result;
-}
+};
 ```
 
 By contrast, declarative programming is concerned with what to do, and it abstracts away the how by relying on expressions. This often results in more concise code, but at scale, it can become more difficult to debug because it’s that much less transparent.
@@ -95,16 +100,13 @@ const sumArray = array => {
 
 ## Object-oriented programming
 
-Nice example of OOP in JS
-https://github.com/gabrielecirulli/2048
-
 #### Q: What is a class?
 
 Classes are at the core of object-oriented programming. They generalize a type of object, allowing you to instantiate multiple objects that share the same basic properties and methods.
 
 Classes can be extended.
 
-https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript
+> **External Resource**: [Digital Ocean's guide on JS OOP](https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript)
 
 #### Q: What is an instance?
 
@@ -133,11 +135,16 @@ Values in JavaScript are immutable. Declared variables, objects are, by default,
 ```js
 var statement = "I am an immutable value";
 var otherStr = statement.slice(8, 17);
+
+console.log(statement); // "I am an immutable value"
+console.log(otherStr); // "immutable"
+
+statement = otherStr;
+
+console.log(statement); // "immutable"
 ```
 
-In the example above, the original string stays unchanged.
-
-Check the link https://doesitmutate.xyz/
+In the example above, the value for the original string stays unchanged. The variable, on the other hand, can be re-assigned.
 
 ### Generic JavaScript questions
 
@@ -145,45 +152,55 @@ Check the link https://doesitmutate.xyz/
 
 Synchronous operations might block the main thread. Asynchronous operations should be built in a way that doesn’t block the main thread.
 
-// Check fs examples in node documentation https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
+> **External Resource**: [node.js `fs` module documentation](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)
 
 #### Q: How Does a Function Expression Differ from a Function Declaration?
 
-Function declarations are hoisted, while function expressions are not. That means function declarations are moved to the top of their scope by the JavaScript interpreter, and so you can define a function declaration and call it anywhere in your code. By contrast, you can only call a function expression in linear sequence: you have to define it before you call it.
+Function declarations are hoisted, while function expressions are not. That means function declarations are moved to the top of their scope by the JavaScript interpreter, and so you can define a function declaration and call it anywhere in your code.
+
+By contrast, you can only call a function expression in linear sequence: you have to define it before you call it.
 
 ```js
 // Function Declaration
 sum(1,2);
+
 function sum(x, y) {
   return x + y;
 };
 
 // Function Expression: ES5
-var sum = function(x, y) {
+const sumES5 = function(x, y) {
   return x + y;
 };
+
 // Function Expression: ES6+
-const sum = (x, y) => { return x + y };
+const sumES6 = (x, y) => x + y;
 ```
 
 #### Q: What are the data types in JavaScript?
 
 There are several data types defined in JavaScript:
 
-**Primitive type**: Boolean, Number, String, Null, Undefined, and as of recently BigInt and Symbol.
-**Reference type**: object.
+- **Primitive type**: `Boolean`, `Number`, `String`, `Null`, `Undefined`, and as of recently `BigInt` and `Symbol`.
+- **Reference type**: `Object`.
 
-#### Q: Is an Array a data type?
+#### Q: Is an `Array` a data type?
 
-An Array is not a data type. It is one of JS’s built-in global objects. Other global global objects include instantiatable classes such as Date, Error, Promise, and useful objects such as Math.
+An `Array` is not a data type. It is one of JS’s built-in global objects. Other global objects include instantiatable classes such as `Date`, `Error`, `Promise`, and useful objects such as `Math`.
 
-Arrays are special, in the sense that they have some of their functionality built into the language.
+`Arrays` are special, in the sense that they have some of their functionality built into the language.
 
 #### Q: What is a closure?
 
-A closure “encapsulates” a portion of code.
+A **closure** *encapsulates* a portion of code.
 
-A closure is an inner function that has access to the outer (enclosing) function’s variables — scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables.
+A *closure* is an inner function that has access to the outer (enclosing) function’s variables — scope chain.
+
+The closure has access to three scope chains:
+
+- Access to its own scope (variables defined between its curly brackets).
+- Access to the outer function’s variables.
+- Access to the global variables.
 
 #### Q: What are promises? What is their advantage over callbacks?
 
