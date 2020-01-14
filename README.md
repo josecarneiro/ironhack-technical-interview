@@ -65,6 +65,12 @@ In **OOP**, everything is considered to be modeled as an object.
 
 This abstraction can be taken all the way down to nuts and bolts for a car, or as broad as simply a car type with a year, make, and model.
 
+#### Q: What is functional programming?
+
+Functional Programming is a form of programming in which you can pass functions as parameters to other functions and also return them as values. In functional programming, we think and code in terms of functions.
+
+JavaScript, Haskell, Clojure, Scala, and Erlang are some of the languages that implement functional programming.
+
 #### Q: What are some advantages of functional programming?
 
 FP is based around the concept of *pure functions*, which avoid shared state, mutable data and side-effects.
@@ -73,7 +79,21 @@ FP is based around the concept of *pure functions*, which avoid shared state, mu
 
 #### Q: What is a pure function?
 
-Given the same inputs, a pure function always returns the same output. It does not have side effects: these are anything, such as logging to the console or modifying an external variable, beyond returning the result.
+A pure function satisfies two conditions:
+
+- Referential transparency: Given the same inputs, a pure function should always return the same output. In other words, for any set of given arguments, a pure function will always return the same value.
+
+- Side-effect free: The function cannot cause any side effects. Side effects may include I/O (e.g., writing to the console or a log file), modifying a mutable object, reassigning a variable, among others.
+
+As a consequence of both conditions, we can also extrapolate that a pure function cannot depend on any mutable state, that is, it can only receive immutable values as arguments.
+
+#### Q: What is a higher order function?
+
+A higher-order function accepts a different function as an argument or returns a function as a return value.
+
+#### Q: What is a factory function?
+
+A factory function is any function which is not a class or constructor that returns a (presumably new) object. In JavaScript, any function can return an object. When it does so without the new keyword, it’s a factory function.
 
 #### Q: What’s the difference between imperative and declarative programming?
 
@@ -123,6 +143,8 @@ A class can extend another class, and therefore inherit its constructor, propert
 
 As one of the tenets of Object Oriented Programming, it is the practice of designing objects to share behaviors and to be able to override shared behaviors with specific ones. Polymorphism takes advantage of inheritance in order to make this happen.
 
+It refers to a programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability to redefine methods for derived classes. For example, given a base class shape, polymorphism enables the programmer to define different area methods for any number of derived classes, such as circles, rectangles and triangles. No matter what shape an object is, applying the area method to it will return the correct results.
+
 #### Q: Differentiate between composition and inheritance.
 
 Composition gives you more flexibility by composing functionality to create a new object, while inheritance forces you to extend entities in an inheritance tree.
@@ -130,6 +152,12 @@ Composition gives you more flexibility by composing functionality to create a ne
 > **External Resource**: [Composition vs. Inheritance](https://www.vicompany.nl/magazine/composition-over-inheritance-and-javascript)
 
 ### Diverse JavaScript Questions
+
+#### Q: Is JavaScript a multi-threaded language?
+
+No, JavaScript is a single-threaded language.
+
+> **External Resource**: [Single-threaded and asynchronous](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd)
 
 #### Q: Explain immutability
 
@@ -224,6 +252,12 @@ A `Promise` is an object that wraps an *asynchronous operation* and *resolves* w
 Promises can also be used in conjunction with `async`/`await` in order to write asynchronous code in a more synchronous-looking manner.
 
 > **External Resource**: [Medium article on callbacks vs. promises](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee)
+
+### React
+
+#### Q: What is a higher-order component?
+
+Similarly to a higher-order function, a higher-order component simply "wraps" a different component.
 
 ### APIs
 
@@ -357,6 +391,10 @@ Many highly specific smaller interfaces should be better than a few general purp
 
 **D: Dependency Inversion Principle**
 One should "depend upon abstractions, [not] concretions."
+
+#### Q: What does DRY stand for?
+
+DRY stands for **D**on't **R**epeat **Y**ourself.
 
 ## External Resources
 
