@@ -47,23 +47,50 @@ If the interview lasts more than two hours, don't feel bad about asking to get u
 
 ## Mock Interview Questions
 
+### Generic JavaScript Questions
+
+#### Q: What are the data types in JavaScript?
+
+There are several data types defined in JavaScript:
+
+- **Primitive type**: `Boolean`, `Number`, `String`, `Null`, `Undefined`, and as of recently `BigInt` and `Symbol`.
+- **Reference type**: `Object`.
+
+#### Q: Is an `Array` a data type?
+
+An `Array` is not a data type. It is one of JS’s built-in global objects. Other global objects include instantiable classes such as `Date`, `Error`, `Promise`, and useful objects such as `Math`.
+
+`Arrays` are special, in the sense that they have some of their functionality built into the language.
+
+#### Q: Explain immutability
+
+Something mutable is, by definition, liable or subject to change or alteration. We use the word to refer to objects whose state is allowed to change over time. An immutable value is the exact opposite: after it has been created, it can never change.
+
+Values in JavaScript are immutable. Declared variables, objects are, by default, mutable.
+
+```js
+var statement = "I am an immutable value";
+var otherStr = statement.slice(8, 17);
+
+console.log(statement); // "I am an immutable value"
+console.log(otherStr); // "immutable"
+
+statement = otherStr;
+
+console.log(statement); // "immutable"
+```
+
+In the example above, the value for the original string stays unchanged. The variable, on the other hand, can be re-assigned.
+
 ### Programming Paradigms
 
 #### Q: Is JavaScript an object-oriented programming language?
 
-This question is often asked by people with a misinformed view of JavaScript.
+This question is often misguided, and might be asked by someone with a misinformed or old-fashioned view of JavaScript.
 
 JavaScript is a *multi-paradigm language*, meaning that it supports multiple different programming styles, including **event-driven**, **functional** and **object-oriented**.
 
 **Object-Oriented Programming (OOP)** is based around the concept of `objects`. These are data structures that contain data fields, known in JavaScript as `properties`, and procedures, known as `methods`.
-
-Whenever you rely on in-built `methods`, `prototypes` or `classes`, you are essentially using Object-Oriented Programming.
-
-#### Q: Why is it called Object-Oriented?
-
-In **OOP**, everything is considered to be modeled as an object.
-
-This abstraction can be taken all the way down to nuts and bolts for a car, or as broad as simply a car type with a year, make, and model.
 
 #### Q: What is functional programming?
 
@@ -106,7 +133,9 @@ In a basic sense, imperative programming is concerned with how you do something.
 ```js
 const sumArray = array => {
   let result = 0;
-  for (let i = 0; i < array.length; i++) result += array[i];
+  for (let i = 0; i < array.length; i++) {
+    result += array[i];
+  }
   return result;
 };
 ```
@@ -159,26 +188,6 @@ No, JavaScript is a single-threaded language.
 
 > **External Resource**: [Single-threaded and asynchronous](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd)
 
-#### Q: Explain immutability
-
-Something mutable is, by definition, liable or subject to change or alteration. We use the word to refer to objects whose state is allowed to change over time. An immutable value is the exact opposite: after it has been created, it can never change.
-
-Values in JavaScript are immutable. Declared variables, objects are, by default, mutable.
-
-```js
-var statement = "I am an immutable value";
-var otherStr = statement.slice(8, 17);
-
-console.log(statement); // "I am an immutable value"
-console.log(otherStr); // "immutable"
-
-statement = otherStr;
-
-console.log(statement); // "immutable"
-```
-
-In the example above, the value for the original string stays unchanged. The variable, on the other hand, can be re-assigned.
-
 #### Q: What is a Regular Expression?
 
 **Regular Expressions (RegEX)** are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
@@ -218,18 +227,6 @@ const sumES5 = function(x, y) {
 const sumES6 = (x, y) => x + y;
 ```
 
-#### Q: What are the data types in JavaScript?
-
-There are several data types defined in JavaScript:
-
-- **Primitive type**: `Boolean`, `Number`, `String`, `Null`, `Undefined`, and as of recently `BigInt` and `Symbol`.
-- **Reference type**: `Object`.
-
-#### Q: Is an `Array` a data type?
-
-An `Array` is not a data type. It is one of JS’s built-in global objects. Other global objects include instantiable classes such as `Date`, `Error`, `Promise`, and useful objects such as `Math`.
-
-`Arrays` are special, in the sense that they have some of their functionality built into the language.
 
 #### Q: What is a closure?
 
@@ -323,6 +320,29 @@ The **MVC** pattern separates application logic between **“Models”**, **“V
 
 **Views** display the data and receive user input.
 
+#### Q: What are SOLID principles?
+
+Principles we should strive for when developing.
+
+**S: Single Responsibility**
+Each piece of your code should address a single purpose and not get entangled with other code.
+
+**O: Open/closed**
+Your code should be open to extension (think inheritance) and closed to modification.
+
+**L: Liskov Substitution Principle**
+Your code should be substitutable for a different code implementation without breaking your application.
+
+**I: Interface Segregation Principle**
+Many highly specific smaller interfaces should be better than a few general purpose interfaces.
+
+**D: Dependency Inversion Principle**
+One should "depend upon abstractions, [not] concretions."
+
+#### Q: What does DRY stand for?
+
+DRY stands for **D**on't **R**epeat **Y**ourself.
+
 ### Web Security
 
 #### Q: What are some common web security concerns?
@@ -372,29 +392,6 @@ In this methodology, development and testing activities are concurrent, unlike o
 The Scrum Framework usually deals with the fact that the requirements are likely to change or most of the time not known at the start of the project.
 
 > **External Resource**: [Agile vs. SCRUM](https://www.guru99.com/agile-vs-scrum.html)
-
-#### Q: What are SOLID principles?
-
-Principles we should strive for when developing.
-
-**S: Single Responsibility**
-Each piece of your code should address a single purpose and not get entangled with other code.
-
-**O: Open/closed**
-Your code should be open to extension (think inheritance) and closed to modification.
-
-**L: Liskov Substitution Principle**
-Your code should be substitutable for a different code implementation without breaking your application.
-
-**I: Interface Segregation Principle**
-Many highly specific smaller interfaces should be better than a few general purpose interfaces.
-
-**D: Dependency Inversion Principle**
-One should "depend upon abstractions, [not] concretions."
-
-#### Q: What does DRY stand for?
-
-DRY stands for **D**on't **R**epeat **Y**ourself.
 
 ## External Resources
 
