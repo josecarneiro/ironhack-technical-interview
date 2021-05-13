@@ -264,7 +264,7 @@ The microservice architecture is an architectural style that structures an appli
 
 The microservice architecture enables the rapid, frequent and reliable delivery of large, complex applications.
 
-#### Q: Name several patterns for web-service APIs. Which is most commonly used in 2019?
+#### Q: Name several patterns for web-service APIs. Which is most commonly used in 2021?
 
 **REST (Representational State Transfer)** is an architectural pattern that separates content by resources and methods.
 
