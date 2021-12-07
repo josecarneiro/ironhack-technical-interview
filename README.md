@@ -56,17 +56,17 @@ There are several data types defined in JavaScript:
 - **Primitive type**: `Boolean`, `Number`, `String`, `Null`, `Undefined`, and as of recently `BigInt` and `Symbol`.
 - **Reference type**: `Object`.
 
-#### Q: Is an `Array` a data type?
+#### Q: Is `Array` a data type?
 
-An `Array` is not a data type. It is one of JS’s built-in global objects. Other global objects include instantiable classes such as `Date`, `Error`, `Promise`, and useful objects such as `Math`.
+`Array` is not a data type. It is one of JS’s built-in global objects. Other global objects include instantiable classes such as `Date`, `Error`, `Promise`, and useful objects such as `Math`.
 
 `Arrays` are special, in the sense that they have some of their functionality built into the language.
 
 #### Q: Explain immutability
 
-Something mutable is, by definition, liable or subject to change or alteration. We use the word to refer to objects whose state is allowed to change over time. An immutable value is the exact opposite: after it has been created, it can never change.
+Something mutable is, by definition, liable or subject to change or alteration. We use the word to refer to values whose state is allowed to change over time. An immutable value is the exact opposite: after it has been created, it can never change.
 
-Values in JavaScript are immutable. Declared variables, objects are, by default, mutable.
+Prrimitive values in JavaScript are immutable. Objects are, by default, mutable.
 
 ```js
 var statement = "I am an immutable value";
@@ -82,6 +82,25 @@ console.log(statement); // "immutable"
 
 In the example above, the value for the original string stays unchanged. The variable, on the other hand, can be re-assigned.
 
+```js
+var foo = { a: 1, b: 2 };
+
+// The variable "bar" is assigned to the value originally assigned to foo.
+var bar = foo;
+
+// Since the value of bar is an object (mutable value),
+// any changes to the object assigned to variable bar are reflected
+// in the object assigned to foo (they are indeed the same object in memory)
+console.log(bar.a); // 1
+
+bar.a = 5;
+
+console.log(bar.a); // 5
+console.log(foo.a); // 5
+```
+
+In the example above, the mutability of objects is demonstrated.
+
 ### Programming Paradigms
 
 #### Q: Is JavaScript an object-oriented programming language?
@@ -90,17 +109,17 @@ This question is often misguided, and might be asked by someone with a misinform
 
 JavaScript is a *multi-paradigm language*, meaning that it supports multiple different programming styles, including **event-driven**, **functional** and **object-oriented**.
 
-**Object-Oriented Programming (OOP)** is based around the concept of `objects`. These are data structures that contain data fields, known in JavaScript as `properties`, and procedures, known as `methods`.
+**Object-Oriented Programming (OOP)** is based around the concept of `objects`. These are data structures that contain *properties* (commonly referred to as data fields, keys), and *methods* (referred to as procedures, functions bound to objects).
 
 #### Q: What is functional programming?
 
-Functional Programming is a form of programming in which you can pass functions as parameters to other functions and also return them as values. In functional programming, we think and code in terms of functions.
+With functional programming, we aim to solve any particular problem by using functions and their capabilities (receiving arbitrary values as arguments, executing logic when called, returning arbitrary values), as oposed to using logical structures such as loops, conditionals, objects.
 
 JavaScript, Haskell, Clojure, Scala, and Erlang are some of the languages that implement functional programming.
 
 #### Q: What are some advantages of functional programming?
 
-FP is based around the concept of *pure functions*, which avoid shared state, mutable data and side-effects.
+Functional Programming is based around the concept of *pure functions*, which avoid shared state, mutable data and side-effects.
 
 > **External Resource**: [Basics of functional programming](https://www.freecodecamp.org/news/functional-programming-principles-in-javascript-1b8fc6c3563f)
 
@@ -117,10 +136,6 @@ As a consequence of both conditions, we can also extrapolate that a pure functio
 #### Q: What is a higher order function?
 
 A higher-order function accepts a different function as an argument or returns a function as a return value.
-
-#### Q: What is a factory function?
-
-A factory function is any function which is not a class or constructor that returns a (presumably new) object. In JavaScript, any function can return an object. When it does so without the new keyword, it’s a factory function.
 
 #### Q: What’s the difference between imperative and declarative programming?
 
@@ -162,23 +177,11 @@ Classes can be extended.
 
 #### Q: What is an instance?
 
-It’s an object instantiated from a class.
+It’s an object created (or instantiated) from a class.
 
 #### Q: How does inheritance work?
 
 A class can extend another class, and therefore inherit its constructor, properties, methods, statics.
-
-#### Q: Explain Polymorphism?
-
-As one of the tenets of Object Oriented Programming, it is the practice of designing objects to share behaviors and to be able to override shared behaviors with specific ones. Polymorphism takes advantage of inheritance in order to make this happen.
-
-It refers to a programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability to redefine methods for derived classes. For example, given a base class shape, polymorphism enables the programmer to define different area methods for any number of derived classes, such as circles, rectangles and triangles. No matter what shape an object is, applying the area method to it will return the correct results.
-
-#### Q: Differentiate between composition and inheritance.
-
-Composition gives you more flexibility by composing functionality to create a new object, while inheritance forces you to extend entities in an inheritance tree.
-
-> **External Resource**: [Composition vs. Inheritance](https://www.vicompany.nl/magazine/composition-over-inheritance-and-javascript)
 
 ### Diverse JavaScript Questions
 
@@ -232,7 +235,7 @@ const sumES6 = (x, y) => x + y;
 
 A **closure** encapsulates a portion of code.
 
-A *closure* is an inner function that has access to the outer (enclosing) function’s variables — scope chain.
+A *closure* is an inner function that has access to the outer (enclosing) function’s variables.
 
 The closure has access to three scope chains:
 
@@ -331,7 +334,7 @@ Each piece of your code should address a single purpose and not get entangled wi
 Your code should be open to extension (think inheritance) and closed to modification.
 
 **L: Liskov Substitution Principle**
-Your code should be substitutable for a different code implementation without breaking your application.
+An object instantiated from class A should be replaceable by any object instantiated from class B that extends class A.
 
 **I: Interface Segregation Principle**
 Many highly specific smaller interfaces should be better than a few general purpose interfaces.
@@ -398,3 +401,5 @@ The Scrum Framework usually deals with the fact that the requirements are likely
 > [123 JavaScript Interview Questions](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions)
 
 > [1000 JavaScript Interview Questions](https://github.com/sudheerj/javascript-interview-questions)
+
+> [Dan Abramov's (React Core Contributor) Technical Interview](https://www.youtube.com/watch?v=XEt09iK8IXs)
