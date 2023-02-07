@@ -149,7 +149,7 @@ Here’s a declarative approach to our `sumArray()` function, above.
 
 ```js
 const sumArray = array => {
-  return array.reduce((x, y) => x + y);
+  return array.reduce((x, y) => x + y, 0);
 };
 ```
 
