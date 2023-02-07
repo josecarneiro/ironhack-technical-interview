@@ -24,18 +24,6 @@ After a technical interview, some companies will ask a candidate to complete a t
 
 A third and last interview might be conducted by other company stakeholders, such as the company's CEO, a general manager, HR personnel, or development team members to ensure a cultural fit.
 
-### Sitting at an interview
-
-Each of the steps outlined above might be conducted separately or in conjunction with another step, so you should always be ready to sit at an interview for up to 4 hours.
-
-Don’t eat or drink too much before the interview. You don't want to feel unwell during the length of the interview.
-
-Wear fresh clothing. Some people will get nervous and sweat.
-
-Take a water bottle with you. It might make you more comfortable to have something to hold on to.
-
-If the interview lasts more than two hours, don't feel bad about asking to get up and go to the bathroom, get a glass of water or a coffee.
-
 ### Some quick points
 
 - Technical interviews may vary widely between companies/interviewers.
@@ -191,16 +179,6 @@ No, JavaScript is a single-threaded language.
 
 > **External Resource**: [Single-threaded and asynchronous](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd)
 
-#### Q: What is a Regular Expression?
-
-**Regular Expressions (RegEX)** are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects.
-
-These patterns are used with the `exec` and `test` methods of RegExp, and with the `match`, `matchAll`, `replace`, `search`, and `split` methods of `String`.
-
-> **External Resource**: [Short explanation of RegEx](https://twitter.com/s0md3v/status/1171394403065155584?s=03)
-
-> **External Resource**: [MDN Reference for Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-
 #### Q: What should I take into account when choosing between writing synchronous or asynchronous code?
 
 Synchronous operations might block the main thread. Asynchronous operations should be built in a way that doesn’t block the main thread.
@@ -229,19 +207,6 @@ const sumES5 = function(x, y) {
 // Function Expression: ES6+
 const sumES6 = (x, y) => x + y;
 ```
-
-
-#### Q: What is a closure?
-
-A **closure** encapsulates a portion of code.
-
-A *closure* is an inner function that has access to the outer (enclosing) function’s variables.
-
-The closure has access to three scope chains:
-
-- Access to its own scope (variables defined between its curly brackets).
-- Access to the outer function’s variables.
-- Access to the global variables.
 
 #### Q: What is a `Promise`? What is their advantage over callbacks?
 
